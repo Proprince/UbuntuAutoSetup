@@ -20,7 +20,7 @@ mkdir ${softwareDir}
 echo 'deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-' |sudo tee /etc/apt/sources.list
+' | sudo tee /etc/apt/sources.list
 
 # update system
 echo "update system"
@@ -48,14 +48,10 @@ echo "install unzip"
 sudo apt-get install unzip -y
 # echo "install jd-json parse tool in linux"
 # sudo apt-get install jd -y
-echo "install kolour paint"
-sudo apt-get install  kolourpaint4 -y 
 echo "install unrar"
 sudo apt-get install unrar -y
 echo "install tmux"
 sudo apt-get install tmux -y
-echo "install gnuplot5"
-sudo apt-get install gnuplot5 -y
 echo "install aria2"
 sudo apt-get install -y aria2
 echo "install zsh"
@@ -68,9 +64,14 @@ echo "install apt-transport-https"
 sudo apt-get install -y apt-transport-https
 echo "install fcitx"
 sudo apt-get install -y fcitx
+# Chinese Fonts
+sudo apt-get install -y  ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy fonts-arphic-ukai fonts-arphic-uming
 
 sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
+mkdir $HOME/.pip
+echo "[global]" > $HOME/.pip/pip.conf
+echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> $HOME/.pip/pip/conf
 ##################################################################
 
 ################# install GUI softwares #####################
@@ -102,6 +103,11 @@ sudo apt-get install -y sublime-text
 sudo apt-get install --allow-unauthenticated -y typora
 sudo apt-get install -y fluxgui
 sudo apt-get install -y ultra-flat-icons
+
+echo "install gnuplot5"
+sudo apt-get install gnuplot5 -y
+echo "install kolour paint"
+sudo apt-get install  kolourpaint4 -y
 #############################################################
 
 echo ""
@@ -201,6 +207,7 @@ git config --global user.email xxx
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sudo sh
 sudo apt-get install -y autojump
 # Todo: cp config from git and get plugins
+# use hard link, e.g. ln vimrc ~/.vimrc
 
 # sublime-chinese
 cd ${softwareDir}
@@ -209,12 +216,14 @@ cd sublime-text-imfix
 ./sublime-imfix
 
 # shadowsocksR
+cd ${softwareDir}
 git clone https://github.com/ssrbackup/shadowsocksr
 cd shadowsocksr
 cp config.json /etc/shadowsocks.json
 sudo ln -s /etc/shadowsocks.json shadowsocks.json
 echo "python $HOME/Softwares/shadowsocksr/shadowsocks/local.py -c /etc/shadowsocks.json" > my_run.sh
 sudo chmod a+x my_run.sh
+echo "su - $USER -c \"python $HOME/Softwares/shadowsocksr/shadowsocks/local.py -c /etc/shadowsocks.json\"" > rc.sh
 
 # vim setting
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
@@ -222,11 +231,6 @@ mkdir $HOME/.vim/colors # color schemes
 
 # Todo: sublime setting
 # Todo: typora setting
-
-# tmux change prefix
-echo "set -g prefix C-o" > $HOME/.tmux.conf
-echo "unbind C-b" >> $HOME/.tmux.conf 
-echo "bind C-o send-prefix" >> $HOME/.tmux.conf 
 
 
 # # install gnome desktop
