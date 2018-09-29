@@ -1,4 +1,7 @@
 # install some tools:
+echo "install Chinese"
+sudo apt-get install language-pack-zh-hans -y
+
 echo "install git"
 sudo apt-get install git -y
 echo "install curl"
