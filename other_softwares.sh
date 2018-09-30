@@ -1,8 +1,3 @@
-# YouCompleteMe
-
-# kolourpaint4
-sudo apt-get install -y kolourpaint4
-
 # f.lux
 sudo add-apt-repository ppa:nathan-renniewaldock/flux -y
 sudo apt-get update
