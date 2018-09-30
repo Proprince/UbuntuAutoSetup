@@ -58,9 +58,3 @@ sudo chsh -s /bin/zsh
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 mkdir $HOME/.vim/colors # color schemes
 ln ubuntu_setup/vim/jellybeans.vim $HOME/.vim/colors
-vim +PluginInstall +qall
-
-# if RAM is less than 1.5GB, can't use ycm
-# need to delete settings in vimrc
-$HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
-ln -f ubuntu_setup/vim/ycm_extra_conf.py $HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py
