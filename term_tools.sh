@@ -23,7 +23,6 @@ sudo apt-get install -y aria2
 echo "install zsh"
 sudo apt-get install -y zsh
 echo "install tofrodos"
-echo "install tofrodos"
 sudo apt-get install -y tofrodos
 echo "install aptitude"
 sudo apt-get install -y aptitude

@@ -64,7 +64,6 @@ googleChromeLink="https://dl.google.com/linux/direct/google-chrome-stable_curren
 sougouLink="http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb?st=6nqfTsVkKHelL8DAMFtcXA&e=1536031562&fn=sogoupinyin_2.2.0.0108_amd64.deb"
 wpsLink="http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb"
 vscodeLink="https://az764295.vo.msecnd.net/stable/493869ee8e8a846b0855873886fc79d480d342de/code_1.26.1-1534444688_amd64.deb"
-virtualBoxLink="https://download.virtualbox.org/virtualbox/5.2.18/virtualbox-5.2_5.2.18-124319~Ubuntu~xenial_amd64.deb"
 netMusicLink="http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb"
 foxitLink="http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader2.4.1.0609_Server_x64_enu_Setup.run.tar.gz"
 
@@ -89,10 +88,11 @@ vscodeName="vscode.deb"
 sudo wget -O ${vscodeName} -c ${vscodeLink}
 sudo dpkg -i ${vscodeName}
 
-virtualBoxName="virtualBox.deb"
-sudo wget -O ${virtualBoxName} -c ${virtualBoxLink}
-sudo dpkg -i ${virtualBoxName}
-sudo apt-get install -fy
+# virtualBoxLink="https://download.virtualbox.org/virtualbox/5.2.18/virtualbox-5.2_5.2.18-124319~Ubuntu~xenial_amd64.deb"
+# virtualBoxName="virtualBox.deb"
+# sudo wget -O ${virtualBoxName} -c ${virtualBoxLink}
+# sudo dpkg -i ${virtualBoxName}
+# sudo apt-get install -fy
 
 netMusicName="netMusic.deb"
 sudo wget -O ${netMusicName} -c ${netMusicLink}

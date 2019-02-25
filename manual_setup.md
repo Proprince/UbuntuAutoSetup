@@ -6,6 +6,8 @@ power: suspend when inactive on battery power
 
 Brightness->screen off: 30 mins
 
+In `/etc/default/keyboard` set `XKBOPTIONS="ctrl:swapcaps"`
+
 ## Unity Tweak Tools
 
 Theme, Icons
@@ -90,7 +92,7 @@ tar -xzvf foxit.tar.gz
 ## shadowsocksR
 
 1. Edit shadowsocks.json configuration
-2. Copy the content of rc.sh into /etc/rc.local
+2. Copy the content of rc.sh into "Startup Applications"
 3. Config SwitchyOmega
     + Proxy: server=127.0.0.1, port=1080
     + Auto Switch

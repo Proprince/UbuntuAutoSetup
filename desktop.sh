@@ -34,6 +34,7 @@ sudo timedatectl set-ntp true
 
 ./term_tools.sh
 ./gui_softwares.sh
+./other_softwares.sh
 
 # set minimize
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
@@ -47,7 +48,7 @@ cp config.json /etc/shadowsocks.json
 sudo ln -s /etc/shadowsocks.json shadowsocks.json
 echo "python $HOME/Softwares/shadowsocksr/shadowsocks/local.py -c /etc/shadowsocks.json" > my_run.sh
 sudo chmod a+x my_run.sh
-echo "su - $USER -c \"python $HOME/Softwares/shadowsocksr/shadowsocks/local.py -c /etc/shadowsocks.json\"" > rc.sh
+echo "python $HOME/Softwares/shadowsocksr/shadowsocks/local.py -c /etc/shadowsocks.json" > rc.sh
 
 echo ""
 echo "#######################################################################"
