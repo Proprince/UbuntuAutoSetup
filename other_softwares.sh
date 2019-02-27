@@ -46,6 +46,9 @@ sudo apt-get install -yf
 # wonderwall
 sudo snap install wonderwall
 
+# calibre
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+
 # mannual install
 # adb
 # anki
@@ -57,7 +60,6 @@ sudo snap install wonderwall
 # mendeley
 # b1 free archiever
 # nut store
-# calibre
 # youdao dict
 # texlive
 # octave
