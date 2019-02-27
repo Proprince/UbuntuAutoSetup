@@ -7,9 +7,9 @@ sudo apt-get install -y albert
 
 # f.lux
 # or redshift-gtk, setting in ~/.config/redshift.conf
-sudo add-apt-repository ppa:nathan-renniewaldock/flux -y
-sudo apt-get update
-sudo apt-get install -y fluxgui
+#sudo add-apt-repository ppa:nathan-renniewaldock/flux -y
+#sudo apt-get update
+#sudo apt-get install -y fluxgui
 
 # # skype
 # skypeLink="https://repo.skype.com/latest/skypeforlinux-64.deb"
@@ -20,17 +20,15 @@ sudo apt-get install -y fluxgui
 # vncviewer
 vncLink="https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.18.625-Linux-x64.deb"
 vncName="vnc.deb"
-sudo wget -O ${vncName} -c ${vncLink}
+wget -O ${vncName} -c ${vncLink}
 sudo dpkg -i ${vncLink}
 
 # sticky notes
 sudo add-apt-repository ppa:umang/indicator-stickynotes -y
-sudo apt-get update
-sudo apt-get install -y indicator-stickynotes
-
 # go-for-it to-do lists
 sudo add-apt-repository ppa:mank319/go-for-it -y
 sudo apt-get update
+sudo apt-get install -y indicator-stickynotes
 sudo apt-get install -y go-for-it
 
 # gpick

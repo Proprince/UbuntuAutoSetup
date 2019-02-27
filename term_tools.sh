@@ -29,7 +29,6 @@ sudo apt-get install -y aptitude
 echo "install apt-transport-https"
 sudo apt-get install -y apt-transport-https
 
-sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
 
 # generate ssh
@@ -44,14 +43,14 @@ git config --global user.email xxx
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sudo sh
 sudo apt-get install -y autojump
 
-sudo pip3 install thefuck
+pip3 install thefuck
 
 # settings for vim, zsh, tmux
 ln ubuntu_setup/settings/vimrc -f $HOME/.vimrc
 ln ubuntu_setup/settings/zshrc -f $HOME/.zshrc
 ln ubuntu_setup/settings/tmux.conf -f $HOME/.tmux.conf
 
-sudo chsh -s /bin/zsh
+sudo usermod -s /usr/bin/zsh $(whoami)
 
 # vim setting
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
