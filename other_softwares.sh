@@ -2,8 +2,9 @@
 sudo apt-get install -y nmap # Network exploration tool and security / port scanner
 
 # albert
-curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-sudo apt-get install -y albert
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
+sudo apt-get update
+sudo apt-get install albert
 
 # f.lux
 # or redshift-gtk, setting in ~/.config/redshift.conf

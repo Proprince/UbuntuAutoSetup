@@ -29,7 +29,7 @@ sudo apt-get update -y
 
 mkdir $HOME/.pip
 echo "[global]" > $HOME/.pip/pip.conf
-echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> $HOME/.pip/pip/conf
+echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> $HOME/.pip/pip.conf
 
 ################# install terminal softwares #####################
 # remove firefox

@@ -42,6 +42,8 @@ git config --global user.email xxx
 # oh-my-zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sudo sh
 sudo apt-get install -y autojump
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 pip3 install thefuck
 
@@ -60,5 +62,5 @@ vim +PluginInstall +qall
 
 # if RAM is less than 1.5GB, can't use ycm
 # need to delete settings in vimrc
-$HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
+sudo python3 $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
 ln -f ubuntu_setup/vim/ycm_extra_conf.py $HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py
